@@ -1,28 +1,90 @@
 <!DOCTYPE html>
-<html lang="es-PE">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Bonita</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --background: #f9fafb;
+      --text: #111827;
+      --card: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--card);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <form>
-        <label for= "nombre">Nombre</label>
-        <input type="text" name = "nombre" id="nombre"><br>
-        <label for= "apellido">Apellido</label>
-        <input type="text" name = "nombre" id="apellido"><br>
-        <label for= "edad">Edad</label>
-        <input type="text" name = "nombre" id="edad"><br>
-        <label for= "genero">Genero</label>
-        <select name="genero" id="genero">
-            <option value="M">Masculino</option>
-            <option value="F">Femenino</option>
-        </select><br>
-        <label for= "carrera">Carrera</label>
-        <input type="text" name = "carrera" id="carrera"><br>
-        <label for= "comentarios">Comentarios</label>
-        <textarea name = "comentarios" id="apellido"></textarea><br>
-        <button>CREAR</button>
-    </form>
+  <header>
+    <h1>¡Bienvenido a mi Página Bonita!</h1>
+    <p>Hecha con cariño y código ✨</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>¿Qué es esto?</h2>
+      <p>Esta es una página de ejemplo creada usando solo HTML y CSS. Tiene un diseño limpio y agradable a la vista, perfecta para mostrar contenido simple o usar como plantilla base.</p>
+    </div>
+
+    <div class="card">
+      <h2>¿Cómo se hizo?</h2>
+      <p>Usamos etiquetas semánticas de HTML, variables CSS, diseño responsive y un poco de amor por el detalle. Todo lo ves en una sola página sin frameworks.</p>
+    </div>
+  </main>
+
+  <footer>
+    Hecho por Rodrigo y ChatGPT 💻<br />
+    Créditos: ChatGPT - OpenAI 2025
+  </footer>
 </body>
-</html>    
+</html>
