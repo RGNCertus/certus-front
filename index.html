@@ -3,87 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página Bonita :v</title>
+  <title>Formulario Bonito</title>
   <style>
-    :root {
-      --primary: #4f46e5;
-      --background: #f9fafb;
-      --text: #111827;
-      --card: #ffffff;
-    }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--background);
-      color: var(--text);
+      background-color: #f0f4f8;
+      color: #333;
     }
 
     header {
-      background-color: var(--primary);
+      background-color: #4f46e5;
       color: white;
+      padding: 2rem;
       text-align: center;
-      padding: 2rem 1rem;
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem;
     }
 
     main {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .card {
-      background-color: var(--card);
-      border-radius: 1rem;
+      max-width: 500px;
+      margin: 2rem auto;
+      background: white;
       padding: 2rem;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-      margin-bottom: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .card h2 {
+    h2 {
       margin-top: 0;
+      color: #4f46e5;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3730a3;
     }
 
     footer {
       text-align: center;
+      margin-top: 2rem;
       font-size: 0.9rem;
-      padding: 1rem;
-      color: #6b7280;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        font-size: 1.5rem;
-      }
-
-      .card {
-        padding: 1rem;
-      }
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>¡Bienvenido a mi Página Bonita!</h1>
-    <p>Hecha con cariño y código ✨</p>
+    <h1>Formulario de Contacto</h1>
+    <p>Déjanos tu mensaje 😊</p>
   </header>
 
   <main>
-    <div class="card">
-      <h2>¿Qué es esto?</h2>
-      <p>Esta es una página de ejemplo creada usando solo HTML y CSS. Tiene un diseño limpio y agradable a la vista, perfecta para mostrar contenido simple o usar como plantilla base.</p>
-    </div>
+    <h2>Escríbenos</h2>
+    <form action="#" method="post">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required />
 
-    <div class="card">
-      <h2>¿Cómo se hizo?</h2>
-      <p>Usamos etiquetas semánticas de HTML, variables CSS, diseño responsive y un poco de amor por el detalle. Todo lo ves en una sola página sin frameworks.</p>
-    </div>
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" required />
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
   </main>
 
   <footer>
-    Hecho por Rodrigo y ChatGPT 💻<br />
+    Hecho por Rodrigo y ChatGPT 💜<br />
     Créditos: ChatGPT - OpenAI 2025
   </footer>
 </body>
