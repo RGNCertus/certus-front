@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de alumnos registrados</h1>
+    <table id="alumnos-table" border = "1">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Edad</th>
+          <th>Género</th>
+          <th>Carrera</th>
+          <th>Comentarios</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <script>
+        async function cargarAlumnos(){
+            try{
+                const res = await fetch('https://certus2-production-9160.up.railway.app/alumnos');
+                const alumnos = await res.json();
+                
+                const tbody = document.querySelector('#alumnos-table tbody');
+                tbody.innerHTML='';
+
+                alumnos.forEach(alumno => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${alumno.nombre}</td>
+                        <td>${alumno.apellido}</td>
+                        <td>${alumno.edad}</td>
+                        <td>${alumno.genero || ''}</td>
+                        <td>${alumno.carrera || ''}</td>
+                        <td>${alumno.comentarios || ''}</td>
+                    `;
+                    tbody.appendChild(tr);
+                })
+
+            }catch(error){
+                console.log("Error al cargar los alumnos", error);
+                alert("No se pudo cargar las lista de alumnos");
+            }
+        }
+
+        cargarAlumnos();
+    </script>
+</body>
+</html>
